@@ -8,7 +8,7 @@ This package uses the skeleton tracking of the Astra Orbbeq SDK to determine the
 Before cloning and installing this package, the following programs and packages have to be installed on your system. 
 -    CMake
 -    OpenNI
--    Orbbeq Astra SDK
+-    Orbbec Astra SDK
 -    astra_body_tracker
 -    body_tracker_msgs
 ### CMake
