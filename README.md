@@ -1,6 +1,6 @@
-# Human-tracking-Orbbeq-Astra-ROS
+# Human-tracking-Orbbec-Astra-ROS
 ## Description:
-This package uses the skeleton tracking of the Astra Orbbeq SDK to determine the position of a human in the camera frame. The position in the camera frame is converted to the a position in the map of the AGV. The package recognizes a person and sends 2D nav goals to the AGV to let him follow a human.
+This package uses the skeleton tracking of the Astra Orbbec SDK to determine the position of a human in the camera frame. The position in the camera frame is converted to the a position in the map of the AGV. The package recognizes a person and sends 2D nav goals to the AGV to let him follow a human.
 ## Prerequisites:
 -    Ros Kinetic on Ubuntu 16.04 or higher (package fully tested on Ubuntu 16.04 with Kinetic)
 -    Orbbec Astra Pro camera
@@ -49,7 +49,7 @@ cd Bin/x64-Release
 ./SimpleViewer
 ```
 If the program is correctly installed a new window opens with a yellow depth video stream.
-### Orbbeq Astra SDK
+### Orbbec Astra SDK
 Download the Orbbec astra SDK zip file for your machine from the the Orbbec site: https://orbbec3d.com/develop/. Copy this zip file to the directeroy 'programs' which you have made with the install of CMake and unzip the file. Rename the unzipped folder to Astra_SDK for easier navigation through the folders. Go to and run:
 ```
 cd programs/Astra_SDK/install
@@ -90,6 +90,14 @@ The next step is to clone the package with the message type for the astra_body_t
 cd catkin_ws/src
 git clone https://github.com/shinselrobots/body_tracker_msgs.git
 cd ..
+catkin_make
+```
+### This package
+The last part you have to install is this package. Go to the source of the catkin_ws and clone this repository:
+```
+cd catkin_ws/src
+git clone https://github.com/wouter1006/Human-tracking-Orbbec-Astra-ROS.git
+cd 
 catkin_make
 ```
 ## Launch human tracker
