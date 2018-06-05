@@ -92,3 +92,8 @@ git clone https://github.com/shinselrobots/body_tracker_msgs.git
 cd ..
 catkin_make
 ```
+## Launch human tracker
+To launch the package you have to launch the human_tracking.lauch file. Run the following code to do so:
+```
+roslaunch human_tracking_package human_tracking.launch
+```
