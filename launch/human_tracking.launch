@@ -1,0 +1,14 @@
+<launch>
+  <!-- Start needed nodes to track human -->
+
+  <!-- Run node to instruct turtlebot -->
+  <node pkg="human_tracking_package" name="human_tracking" type="human_tracking.py" output="screen"/>
+
+  <!-- Run Astra Orbbec camera and get data into ROS -->
+  <node pkg="astra_body_tracker" type="astra_body_tracker_node" name="astra_body_tracker_node">
+  </node>
+
+	<!-- Start TF converting node  -->
+  <node pkg="human_tracking_package" name="tf_listener" type="tf_listener.py"/>
+
+</launch>
