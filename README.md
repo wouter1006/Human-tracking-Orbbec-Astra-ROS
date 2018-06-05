@@ -27,9 +27,9 @@ Download the Orbbec OpenNI SDK from the following site: https://orbbec3d.com/dev
 ```
 cd programs/OpenNI_<your_version>/Linux
 ```
-Here unzip the OpenNI-Linux-Arm64-2.3 folder and run the following commands:
+Here unzip the OpenNI-Linux-x64-2.3 folder and run the following commands:
 ```
-cd OpenNI-Linux-Arm64-2.3
+cd OpenNI-Linux-x64-2.3
 chmod +x install.sh
 sudo ./install.sh
 ```
