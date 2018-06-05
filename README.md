@@ -48,7 +48,7 @@ make
 cd Bin/x64-Release
 ./SimpleViewer
 ```
-If the program is correctly installed a new window opens with a yellow deth video stream.
+If the program is correctly installed a new window opens with a yellow depth video stream.
 ### Orbbeq Astra SDK
 Download the Orbbec astra SDK zip file for your machine from the the Orbbec site: https://orbbec3d.com/develop/. Copy this zip file to the directeroy 'programs' which you have made with the install of CMake and unzip the file. Rename the unzipped folder to Astra_SDK for easier navigation through the folders. Go to and run:
 ```
