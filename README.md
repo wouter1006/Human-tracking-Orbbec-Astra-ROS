@@ -20,7 +20,7 @@ cd programs/cmake-<your_version>
 ```
 To install CMake run the following command (this can take a few minutes)
 ```
-./bootstrap && make && make install
+sudo ./bootstrap && make && make install
 ```
 ### OpenNI
 Download the Orbbec OpenNI SDK from the following site: https://orbbec3d.com/develop/. Copy this zip file to the programs directory you've made with the installation of CMake. Unzip the file in this directry. Go to:
@@ -33,7 +33,7 @@ cd OpenNI-Linux-x64-2.3
 chmod +x install.sh
 sudo ./install.sh
 ```
-Replug your device and run:
+Plug your camera and run:
 ```
 source OpenNIDevEnvironment
 ```
@@ -56,19 +56,25 @@ cd programs/Astra_SDK/install
 chmod +x install.sh
 sudo ./install.sh
 ```
-Go to the following folder:
+To test if the Astra SDK is installed properly, you need to have the SFML libraries
 ```
-cd samples/sfml
+sudo apt-get install libsfml-dev
 ```
-In this folder there are a lot of folders you can make with CMake. Every folder contains a program. For the following of persons with the Orbbec astra we only need the SimpleBodyViewer-SFML, but feel free to try all of them. Run:
+Test the software with the following commands:
 ```
-cd SimpleBodyViewer-SFML
-cmake CmakeLists.txt
-cd
-cd programs/Astra_SDK/bin
-./SimpleBodyViewer-SFML
+cd ..
+cd bin
+./ SimpleBodyViewer-SFML
 ```
 If the program is installed correctly, a new window pops up wich recognizes a human and draws a skeleton in the picture.
+### astra_body_msgs
+The next step is to clone the package with the message type for the astra_body_tracker from this github repository: https://github.com/shinselrobots/body_tracker_msgs. In the terminal go to the source of your catkin_ws and clone and build this package:
+```
+cd catkin_ws/src
+git clone https://github.com/shinselrobots/body_tracker_msgs.git
+cd ..
+catkin_make
+```
 ### astra_body_tracker
 First step is to clone the astra_body_tracker from this github repository: https://github.com/KrisPiters/astra_body_tracker. In the terminal go to the source of your catkin_ws and clone and build this package:
 ```
@@ -84,20 +90,15 @@ Change the pahts at line 19 till 22 to the path to your Astra_SDK direcotry. Whe
 cd ..
 catkin_make
 ```
-### astra_body_msgs
-The next step is to clone the package with the message type for the astra_body_tracker from this github repository: https://github.com/shinselrobots/body_tracker_msgs. In the terminal go to the source of your catkin_ws and clone and build this package:
-```
-cd catkin_ws/src
-git clone https://github.com/shinselrobots/body_tracker_msgs.git
-cd ..
-catkin_make
-```
 ### This package
 The last part you have to install is this package. Go to the source of the catkin_ws and clone this repository:
 ```
 cd catkin_ws/src
 git clone https://github.com/wouter1006/Human-tracking-Orbbec-Astra-ROS.git
-cd 
+cd scripts
+chmod +x human_tracking.py
+chmod +x tf_listener.py
+cd ../..
 catkin_make
 ```
 ## Launch human tracker
