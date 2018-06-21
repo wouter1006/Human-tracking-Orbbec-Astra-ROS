@@ -49,7 +49,7 @@ cd Bin/x64-Release
 ./SimpleViewer
 ```
 If the program is correctly installed a new window opens with a yellow depth video stream as shown below.
-[![IMAGE ALT TEXT HERE](https://github.com/wouter1006/Human-tracking-Orbbec-Astra-ROS/blob/master/OpenNI_result.png)]
+![IMAGE ALT TEXT HERE](https://github.com/wouter1006/Human-tracking-Orbbec-Astra-ROS/blob/master/OpenNI_result.png)
 
 ### Orbbec Astra SDK
 Download the Orbbec astra SDK zip file for your machine from the the Orbbec site: https://orbbec3d.com/develop/. Copy this zip file to the directeroy /programs which you have made with the installation of CMake and unzip the file. Rename the unzipped folder to Astra_SDK for easier navigation through the folders. Go to and run:
@@ -69,7 +69,7 @@ cd bin
 ./SimpleBodyViewer-SFML
 ```
 If the program is installed correctly, a new window pops up wich recognizes a human and draws a skeleton in the picture as shown below.
-[![IMAGE ALT TEXT HERE](https://github.com/wouter1006/Human-tracking-Orbbec-Astra-ROS/blob/master/Astra_SDK_result.png)]
+![IMAGE ALT TEXT HERE](https://github.com/wouter1006/Human-tracking-Orbbec-Astra-ROS/blob/master/Astra_SDK_result.png)
 
 ### astra_body_msgs
 The next step is to clone the package with the message type for the astra_body_tracker from this github repository: https://github.com/shinselrobots/body_tracker_msgs. In the terminal go to the source of your /catkin_ws and clone and build this package:
